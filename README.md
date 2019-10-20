@@ -19,4 +19,7 @@ Every idea has it's own ID.
 There is a different SESSION ID for every single time you open and close the app.
 
 # How To Run
+Just double click **run.bat** and you're good to go.
+
+From Console:
 **node app** or **node app My Awesome Idea**
