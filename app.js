@@ -238,7 +238,7 @@ if (_ == false) {
                     } else {
                         switch (data.toLowerCase()) {
                             case 'y':
-                                run('reset');
+                                run('#reset');
                                 break;
                             case 'n':
                                 app();
