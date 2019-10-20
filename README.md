@@ -1,5 +1,5 @@
-# ideas
- I have an idea!
+# IDEAS
+I have an idea!
 
 # Commands
 #list: Shows a list of your ideas\
@@ -10,6 +10,12 @@
 #\*del: Deletes a session (requires a SESSION ID)\
 #reset: Deletes all the ideas, asks twice, be careful\
 #export: Exports the ideas as a TXT file\
-#exit: Exits the app\
+#exit: Exits the app
+
+# Ideas
+Every idea has it's own ID.
+
+# Sessions
+There is a different SESSION ID for every single time you open and close the app.
 
 **node app** or **node app My Awesome Idea**
