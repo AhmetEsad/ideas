@@ -18,4 +18,5 @@ Every idea has it's own ID.
 # Sessions
 There is a different SESSION ID for every single time you open and close the app.
 
+# How To Run
 **node app** or **node app My Awesome Idea**
