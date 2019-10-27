@@ -40,6 +40,7 @@ var commands = {
     "del": "Deletes an idea (requires an ID)",
     "*del": "Deletes a session (requires a SESSION ID)",
     "reset": "Deletes all the ideas, asks twice, be careful",
+    "import": "Imports ideas from a TXT file",
     "export": "Exports the ideas as a TXT file",
     "exit": "Exits the app"
 }
@@ -48,6 +49,27 @@ function run(command) {
     var cmd = command.split(' ')[0].split('').slice(1).join('');
     var args = command.split(' ').slice(1);
     switch (cmd) {
+        case 'import':
+            if (args[0]) {
+                var file = '';
+                fs.readFile(`./${args[0]}`, function (e) {
+                    if (e) {
+                        console.log(`Couldn't find ${args[0]} in this folder`);
+                        app();
+                    } else {
+                        file = fs.readFileSync(`./${args[0]}`, 'utf-8').split('\r\n');
+                        console.log('[IMPORTING YOUR IDEAS]');
+                        file.map(f => {
+                            newIdea(f);
+                        });
+                        console.log('[SUCCESSFULLY IMPORTED YOUR IDEAS]');
+                        app();
+                    }
+                });
+            } else {
+                console.log('You must specify the file name.')
+            }
+            break;
         case 'list':
             if (ideas.sessions.length > 0) {
                 var sessionNum = 1;
@@ -200,7 +222,7 @@ function run(command) {
 }
 
 function app() {
-    console.log(`\nWhat's on your mind?${session.length !== 0 ? ' (' + (session.length + 1) + ')' : ''}`);
+    console.log(`\nWhat's on your mind?${session.length !== 0 ? ' (' + (session.length) + ')' : ''}`);
     console.log(Object.keys(commands).slice(1).map(command => `[${Object.keys(commands)[0]}${command.toUpperCase()}]`).join(' - '));
 }
 
