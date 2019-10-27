@@ -9,6 +9,7 @@ I have an idea!
 #del: Deletes an idea (requires an ID)\
 #\*del: Deletes a session (requires a SESSION ID)\
 #reset: Deletes all the ideas, asks twice, be careful\
+#import: Imports ideas from a TXT file\
 #export: Exports the ideas as a TXT file\
 #exit: Exits the app
 
