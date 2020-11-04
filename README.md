@@ -14,7 +14,7 @@ I have an idea!
 #exit: Exits the app
 
 # Ideas
-Every idea has it's own ID.
+Every idea has its own ID.
 
 # Sessions
 There is a different SESSION ID for every single time you open and close the app.
